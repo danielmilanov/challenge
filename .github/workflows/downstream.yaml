@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: 'Post event to downstream repo'
         run: |
-          curl -vv -X POST https://api.github.com/repos/danielmilanov/webserver-deployment/dispatches \
+          curl -vv -X POST https://api.github.com/repos/danielmilanov/challenge-deployment/dispatches \
           -u ${{ secrets.PAT }} \
           --data '{"event_type": "trigger_workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
