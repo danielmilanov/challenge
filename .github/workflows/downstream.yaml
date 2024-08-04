@@ -1,8 +1,8 @@
 name: Trigger downstream pipeline
 
-on: push
-  #  release:
-  #    types: [created]
+on:
+  release:
+    types: [created]
 
 jobs:
   post-event:
